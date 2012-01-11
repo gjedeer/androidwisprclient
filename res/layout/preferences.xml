@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/general">
+		<CheckBoxPreference android:key="@string/pref_active" android:title="@string/active"
+			android:summary="@string/active_summary" android:defaultValue="true" />
+
+		<EditTextPreference android:key="@string/pref_username" android:title="@string/user"
+			android:summary="@string/user_summary" android:inputType="textEmailAddress" />
+
+		<EditTextPreference android:key="@string/pref_password" android:title="@string/password"
+			android:summary="@string/password_summary" android:inputType="textPassword" />
+
+		<CheckBoxPreference android:key="@string/pref_connectionAutoEnable" android:title="@string/connectionAutoEnable"
+			android:defaultValue="false" android:summary="@string/connectionAutoSummary" />
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/connectionNotifications">
+		<CheckBoxPreference android:key="@string/pref_connectionNotificationsEnable" android:title="@string/connectionNotificationsEnable"
+			android:defaultValue="true" android:summary="@string/connectionNotificationsSummary" />
+
+		<RingtonePreference android:layout="?android:attr/preferenceLayoutChild" android:dependency="@string/pref_connectionNotificationsEnable"
+			android:key="@string/pref_connectionRingtone" android:title="@string/ringtone" android:ringtoneType="notification"
+			android:defaultValue="content://settings/system/notification_sound" android:summary="@string/connectionRingtoneSummary" />
+
+		<CheckBoxPreference android:layout="?android:attr/preferenceLayoutChild" android:dependency="@string/pref_connectionNotificationsEnable"
+			android:key="@string/pref_connectionVibrate" android:defaultValue="false" android:title="@string/connectionNotificationsVibrate"
+			android:summary="@string/connectionNotificationsVibrateSummary" />
+	</PreferenceCategory>
+</PreferenceScreen>  

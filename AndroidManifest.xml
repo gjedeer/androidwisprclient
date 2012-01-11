@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sputnik.wispr"
+	android:versionName="1.4.7" android:versionCode="147" android:installLocation="auto">
+
+	<application android:icon="@drawable/f" android:label="@string/app_name" android:debuggable="false">
+
+		<meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIrz2YSu-eoPOUZdBts58P16DSrg8l19ZXzE1SOA" />
+
+		<activity android:label="@string/app_name" android:name=".AndroidWISPr">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<receiver android:name=".NetworkConnectivityReceiver" android:enabled="true">
+			<intent-filter>
+				<action android:name="android.net.wifi.STATE_CHANGE" />
+				<action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name=".NetworkScanReceiver" android:enabled="true">
+			<intent-filter>
+				<action android:name="android.net.wifi.SCAN_RESULTS" />
+			</intent-filter>
+		</receiver>
+
+		<service android:name=".WISPrLoggerService" />
+		<service android:name=".NotificationCleaningService" />
+		<service android:name=".LogOffService" />
+	</application>
+
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+
+	<uses-feature android:name="android.hardware.wifi" android:required="true" />
+	
+	<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8" />
+</manifest> 
