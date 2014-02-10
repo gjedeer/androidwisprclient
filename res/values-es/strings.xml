@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Fon</string>
+	<string name="user">Email</string>
+	<string name="password">Contraseña</string>
+	<string name="active">Activo</string>
+	<string name="header_text">Introduce tu nombre de usuario y contraseña.\nCada vez que estés cerca de un punto WiFi de Fon, te conectarás automáticamente a él.</string>
+
+	<string name="active_summary">Selecciona para activar el login automático</string>
+	<string name="user_summary">Tu email de acceso a Fon</string>
+	<string name="password_summary">Tu password de Fon</string>
+	<string name="notif_title_ok">Fon</string>
+	<string name="notif_text_ok">Conectado a %s</string>
+	<string name="notif_title_ko">Fon</string>
+	<string name="notif_text_ko">Error conectando a Fon {%s}</string>
+	<string name="notif_default_ssid">Fon</string>
+	<string name="notif_error_100">Acceso denegado</string>
+  	<string name="notif_error_1024">WISPr no presente</string>
+	<string name="notif_error_255">Error Interno</string>
+
+	<string name="connectionNotifications">Notificaciones</string>
+	<string name="connectionNotificationsEnable">Activar Notificaciones</string>
+	<string name="connectionNotificationsSummary">Recibe notificaciones cuando te conectes a Fon</string>
+	<string name="connectionNotificationsVibrate">Vibrar</string>
+	<string name="connectionNotificationsVibrateSummary">Haz que tu teléfono vibre cuando te conectes a Fon</string>
+	<string name="connectionAutoEnable">Auto Conexión</string>
+	<string name="connectionAutoSummary">Conecta automaticamente cuando estés cerca de un punto Fon</string>
+	<string name="connectionRingtoneSummary">Haz que tu teléfono suene cuando te conectes a Fon</string>
+
+	<string name="ringtone">Sonido</string>
+	<string name="general">Configuración de acceso</string>
+
+	<string name="help_text">¡¡Si tienes una fonera, tienes acceso gratuito!!\nPara más información visita http://corp.fon.com/support/</string>
+	<string name="help_title">Ayuda</string>
+
+	<string name="ok">OK</string> 
+
+	<string name="menu_close">Cerrar</string>
+	<string name="menu_logOff">Desconectar</string>
+	<string name="menu_advanced">Preferencias Avanzadas</string>
+	<string name="menu_back">Volver</string>
+	<string name="menu_help">Ayuda</string>
+	
+	<string name="banner">Banner</string>
+</resources>

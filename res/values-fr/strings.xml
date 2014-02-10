@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Fon</string>
+	<string name="user">Nom d\'utilisateur</string>
+	<string name="password">Mot de passe</string>
+	<string name="active">Activé</string>
+	<string name="header_text">Veuillez saisir votre nom d\'utilisateur et mot de passe.\nÀ chaque fois que vous êtes près d\'un Hotspot WiFi du réseau Fon, vous y serez automatiquement connecté.</string>
+
+	<string name="active_summary">Cocher pour activer automatiquement l\'authentification</string>
+	<string name="user_summary">Votre nom d\'utilisateur Fon</string>
+	<string name="password_summary">Votre mot de passe Fon</string>
+	<string name="notif_title_ok">Fon</string>
+	<string name="notif_text_ok">Connecté à %s</string>
+	<string name="notif_title_ko">Fon</string>
+	<string name="notif_text_ko">Erreur lors de la connection à Fon {%s}</string>
+	<string name="notif_default_ssid">Fon</string>
+	<string name="notif_error_100">Échec de Login </string>
+	<string name="notif_error_1024">WISPr non présent </string>
+	<string name="notif_error_255">Erreur interne</string>
+
+	<string name="connectionNotifications">Notifications</string>
+	<string name="connectionNotificationsEnable">Autoriser les notifications</string>
+	<string name="connectionNotificationsSummary">Recevoir des notifications lorsque vous vous connectez à Fon</string>
+	<string name="connectionNotificationsVibrate">Vibrer</string>
+	<string name="connectionNotificationsVibrateSummary">Vibrer lorsque vous vous connectez à Fon</string>
+	<string name="connectionAutoEnable">Connexion automatique</string>
+	<string name="connectionAutoSummary">Connexion automatique à partir de n\'importe quel Fon spot</string>
+	<string name="connectionRingtoneSummary">Emettre un son lorsque vous vous connectez à Fon</string>
+
+	<string name="ringtone">Sonnerie</string>
+	<string name="general">Configuration de l\'authentification</string>
+	
+	<string name="help_text">Fon, la plus grande communauté WiFi au monde. Pour plus d\'informations, rendez-vous sur http://corp.fon.com/fr/support/</string>
+	<string name="help_title">Aide</string>
+	
+	<string name="ok">OK</string> 
+	
+	<string name="menu_close">Sauvegarder</string>
+	<string name="menu_logOff">Se déconnecter</string>
+	<string name="menu_advanced">Préférences avancées </string>
+	<string name="menu_back">Retour</string>
+	<string name="menu_help">Aide</string>
+	
+	<string name="banner">Banner</string>
+</resources>
