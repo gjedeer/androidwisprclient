@@ -9,9 +9,9 @@
 	<string name="user_summary">Your FON username</string>
 	<string name="password_summary">Your FON password</string>
 	<string name="notif_title_ok">FON Access</string>
-	<string name="notif_text_ok">Conected to %s</string>
+	<string name="notif_text_ok">Connected to %s</string>
 	<string name="notif_title_ko">FON Access</string>
-	<string name="notif_text_ko">Error conecting to FON {%s}</string>
+	<string name="notif_text_ko">Error connecting to FON {%s}</string>
 	<string name="notif_default_ssid">FON</string>
 	<string name="notif_error_100">Login Failed</string>
   	<string name="notif_error_1024">WISPr not present</string>
