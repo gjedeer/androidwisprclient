@@ -31,7 +31,7 @@ public class NetworkConnectivityReceiver extends BroadcastReceiver {
 			WifiInfo connectionInfo = wm.getConnectionInfo();
 			String ssid = connectionInfo.getSSID();
 			String bssid = connectionInfo.getBSSID();
-			Log.v(TAG, "Conected. SSID:" + ssid + ", bssid:" + bssid + ", supplicantState:"
+			Log.v(TAG, "Connected. SSID:" + ssid + ", bssid:" + bssid + ", supplicantState:"
 					+ connectionInfo.getSupplicantState());
 
 			// We look if it's a FON Access Point
