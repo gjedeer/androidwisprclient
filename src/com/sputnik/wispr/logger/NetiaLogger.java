@@ -23,6 +23,6 @@ public class NetiaLogger extends SimpleHTTPLogger {
 
 	@Override
 	protected String getLogOffUrl() { // TODO figure it out
-		return "http://www.wp.pl/";
+		return null;
 	}
 }

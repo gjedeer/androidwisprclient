@@ -35,6 +35,7 @@ public abstract class SimpleHTTPLogger extends HTTPLogger {
 			}
 		} catch (IOException e) {
 			Log.e(TAG, "Error trying to log", e);
+			Log.v(TAG, "Failed login URL: " + targetURL);
 			res = WISPrConstants.WISPR_RESPONSE_CODE_INTERNAL_ERROR;
 		}
 

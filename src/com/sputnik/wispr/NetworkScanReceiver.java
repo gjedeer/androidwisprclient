@@ -67,7 +67,12 @@ public class NetworkScanReceiver extends BroadcastReceiver {
 							Log.d(TAG, "Trying to connect");
 						}// No FON Signal Available
 					} else {
-						Log.d(TAG, "Not connecting because a prefered network is available OR it's already connected");
+						if(isAlreadyConnected(wm)) {
+							Log.d(TAG, "Not connecting because it's already connected");
+						}
+						if(isAnyPreferedNetworkAvailable(wm)) {
+							Log.d(TAG, "Not connecting because a prefered network is available");
+						}
 					}
 					lastCalled = System.currentTimeMillis();
 				}// Not Scanning State
@@ -153,7 +158,7 @@ public class NetworkScanReceiver extends BroadcastReceiver {
 				// We load the SSIDs of the available networks
 				for (ScanResult scanResult : scanResults) {
 					scanResultsKeys.add(FONUtil.cleanSSID(scanResult.SSID));
-					// Log.v(TAG, "Adding scanResultKey:" + FONUtil.cleanSSID(scanResult.SSID));
+					//Log.v(TAG, "Adding scanResultKey:" + FONUtil.cleanSSID(scanResult.SSID));
 				}
 
 				Iterator<WifiConfiguration> it = configuredNetworks.iterator();
@@ -166,8 +171,8 @@ public class NetworkScanReceiver extends BroadcastReceiver {
 						wm.removeNetwork(wifiConfiguration.networkId);
 					} else if (!FONUtil.isSupportedNetwork(wifiConfiguration.SSID, wifiConfiguration.BSSID)) {
 						found = scanResultsKeys.contains(FONUtil.cleanSSID(wifiConfiguration.SSID));
-						// Log.v(TAG, "looking for: " + FONUtil.cleanSSID(wifiConfiguration.SSID) +
-						// (found ? " match" : " NO match"));
+						//Log.v(TAG, "looking for: " + FONUtil.cleanSSID(wifiConfiguration.SSID) +
+						//      (found ? " match" : " NO match"));
 					}
 				}
 			}
