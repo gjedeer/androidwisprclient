@@ -16,6 +16,7 @@ import com.sputnik.wispr.logger.BTFonLogger;
 import com.sputnik.wispr.logger.LivedoorLogger;
 import com.sputnik.wispr.logger.LoggerResult;
 import com.sputnik.wispr.logger.NeufLogger;
+import com.sputnik.wispr.logger.NetiaLogger;
 import com.sputnik.wispr.logger.WISPrLogger;
 import com.sputnik.wispr.logger.WebLogger;
 import com.sputnik.wispr.util.FONUtil;
@@ -43,6 +44,8 @@ public class WISPrLoggerService extends IntentService {
 			logger = new BTFonLogger();
 		} else if (FONUtil.isLivedoor(ssid, bssid)) {
 			logger = new LivedoorLogger();
+		} else if (FONUtil.isNetiaFonera(ssid, bssid)) {
+			logger = new NetiaLogger();
 		} else {
 			logger = new WISPrLogger();
 		}

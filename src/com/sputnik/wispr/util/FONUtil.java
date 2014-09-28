@@ -12,7 +12,7 @@ public class FONUtil {
 
 		if (ssid != null) {
 			res = isFonera(ssid, bssid) || isNeufBox(ssid, bssid) || isBtFonera(ssid, bssid) || isBtHub(ssid, bssid)
-					|| isLivedoor(ssid, bssid) || isSBPublicFonera(ssid, bssid);
+					|| isLivedoor(ssid, bssid) || isSBPublicFonera(ssid, bssid) || isNetiaFonera(ssid, bssid);
 		}
 
 		return res;
@@ -47,6 +47,11 @@ public class FONUtil {
 	public static boolean isBtHub(String ssid, String bssid) {
 		ssid = FONUtil.cleanSSID(ssid);
 		return ssid != null && bssid != null && ssid.equalsIgnoreCase("BTFON") && !bssid.startsWith(FON_MAC_PREFIX);
+	}
+
+	public static boolean isNetiaFonera(String ssid, String bssid) {
+		ssid = FONUtil.cleanSSID(ssid);
+		return ssid != null && bssid != null && ssid.equalsIgnoreCase("FON_NETIA_FREE_INTERNET");
 	}
 
 	public static boolean haveConnection() throws IOException {
