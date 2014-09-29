@@ -20,3 +20,7 @@ I intend to:
 Get your signed APK file here:
 
 https://github.com/gjedeer/androidwisprclient/releases
+
+## Tips
+
+* If you're using a Netia-provided fon router (as opposed to a regular fonera purchased separately), you need to append the #netia suffix to your username (ex: peter@gmail.com -> peter@gmail.com#netia)
