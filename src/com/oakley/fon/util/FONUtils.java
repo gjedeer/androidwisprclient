@@ -101,7 +101,7 @@ public class FONUtils {
 				&& !bssid.startsWith(FON_MAC_PREFIX);
 	}
 	public static boolean isNetiaFonera(String ssid, String bssid) {
-		ssid = FONUtil.cleanSSID(ssid);
+		ssid = FONUtils.cleanSSID(ssid);
 		return ssid != null && bssid != null && ssid.equalsIgnoreCase("FON_NETIA_FREE_INTERNET");
 	}
 

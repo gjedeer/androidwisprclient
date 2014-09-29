@@ -59,7 +59,7 @@ public class WISPrLoggerService extends IntentService {
 			logger = new BTFonLogger();
 		} else if (FONUtils.isLivedoor(ssid, bssid)) {
 			logger = new LivedoorLogger();
-        } else if (FONUtil.isNetiaFonera(ssid, bssid)) {
+        } else if (FONUtils.isNetiaFonera(ssid, bssid)) {
             logger = new NetiaLogger();
 		} else {
 			logger = new WISPrLogger();
