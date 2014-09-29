@@ -45,7 +45,7 @@ public class NetworkScanReceiver extends BroadcastReceiver {
 	public void onReceive(Context context, Intent intent) {
 		long now = System.currentTimeMillis();
 
-		// Log.d(TAG, "Action Received: " + intent.getAction() + " From intent: " + intent);
+		Log.d(TAG, "Action Received: " + intent.getAction() + " From intent: " + intent);
 
 		if (lastCalled == -1 || (now - lastCalled > MIN_PERIOD_BTW_CALLS)) {
 			lastCalled = now;
@@ -61,10 +61,10 @@ public class NetworkScanReceiver extends BroadcastReceiver {
 						if (!isAnyPreferedNetworkAvailable(wm)) {
 							ScanResult fonScanResult = getFonNetwork(wm);
 							if (fonScanResult != null) {
-								// Log.d(TAG, "Scan result found:" + fonScanResult);
+								Log.v(TAG, "Scan result found:" + fonScanResult);
 								WifiConfiguration fonNetwork = lookupConfigurationByScanResult(
 										wm.getConfiguredNetworks(), fonScanResult);
-								// Log.d(TAG, "FON Network found:" + fonNetwork);
+								Log.v(TAG, "FON Network found:" + fonNetwork);
 								if (fonNetwork == null) {
 									fonNetwork = new WifiConfiguration();
 									fonNetwork.SSID = '"' + fonScanResult.SSID + '"';
@@ -74,7 +74,7 @@ public class NetworkScanReceiver extends BroadcastReceiver {
 									fonNetwork.networkId = wm.addNetwork(fonNetwork);
 									wm.saveConfiguration();
 								}
-								// Log.v(TAG, "Selected network:" + fonNetwork);
+								Log.v(TAG, "Selected network:" + fonNetwork);
 								wm.enableNetwork(fonNetwork.networkId, false);
 								Log.d(TAG, "Trying to connect");
 							}// No FON Signal Available

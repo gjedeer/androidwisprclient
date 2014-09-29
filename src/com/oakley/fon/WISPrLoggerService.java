@@ -29,6 +29,7 @@ import android.util.Log;
 import com.oakley.fon.logger.BTFonLogger;
 import com.oakley.fon.logger.LivedoorLogger;
 import com.oakley.fon.logger.LoggerResult;
+import com.oakley.fon.logger.NetiaLogger;
 import com.oakley.fon.logger.NeufLogger;
 import com.oakley.fon.logger.WISPrLogger;
 import com.oakley.fon.logger.WebLogger;
@@ -58,6 +59,8 @@ public class WISPrLoggerService extends IntentService {
 			logger = new BTFonLogger();
 		} else if (FONUtils.isLivedoor(ssid, bssid)) {
 			logger = new LivedoorLogger();
+        } else if (FONUtil.isNetiaFonera(ssid, bssid)) {
+            logger = new NetiaLogger();
 		} else {
 			logger = new WISPrLogger();
 		}

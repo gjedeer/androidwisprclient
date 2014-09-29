@@ -36,7 +36,7 @@ public class NotificationCleaningService extends IntentService {
 
 	@Override
 	protected void onHandleIntent(Intent intent) {
-		Log.v(TAG, "Handling disconection intent: " + intent);
+		Log.v(TAG, "Handling disconnection intent: " + intent);
 		if (intent.getAction().equals(ACTION_CLEAN)) {
 			cleanNotification(this, intent);
 			cleanLogOffUrl(this, intent);

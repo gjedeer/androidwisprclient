@@ -53,7 +53,7 @@ public class FONUtils {
 
 		if (ssid != null) {
 			res = isFonNetwork(ssid, bssid) || isNeufBox(ssid, bssid) || isBtHub(ssid, bssid)
-					|| isLivedoor(ssid, bssid);
+					|| isLivedoor(ssid, bssid) || isNetiaFonera(ssid, bssid);
 		}
 
 		return res;
@@ -99,6 +99,10 @@ public class FONUtils {
 		ssid = FONUtils.cleanSSID(ssid);
 		return ssid != null && bssid != null && ssid.equalsIgnoreCase("FON_livedoor")
 				&& !bssid.startsWith(FON_MAC_PREFIX);
+	}
+	public static boolean isNetiaFonera(String ssid, String bssid) {
+		ssid = FONUtil.cleanSSID(ssid);
+		return ssid != null && bssid != null && ssid.equalsIgnoreCase("FON_NETIA_FREE_INTERNET");
 	}
 
 	public static boolean isBtHub(String ssid, String bssid) {
