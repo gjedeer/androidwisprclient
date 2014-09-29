@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sputnik.wispr"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.oakley.fon"
 	android:versionName="1.4.8" android:versionCode="148" android:installLocation="auto">
 
-	<application android:icon="@drawable/f" android:label="@string/app_name" android:debuggable="false">
+	<meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIrz2YSu-eoPOUZdBts58P16DSrg8l19ZXzE1SOA" />
 
-		<meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIrz2YSu-eoPOUZdBts58P16DSrg8l19ZXzE1SOA" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	
+	<uses-feature android:name="android.hardware.wifi" android:required="true" />
+	<uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+	<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8" />
+		
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
 
 		<activity android:label="@string/app_name" android:name=".AndroidWISPr">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:scheme="fon" />
+			</intent-filter>
 		</activity>
+
+		<activity android:label="@string/app_name" android:name=".PreferencesAdvanced" />
 
 		<receiver android:name=".NetworkConnectivityReceiver" android:enabled="true">
 			<intent-filter>
@@ -30,13 +49,4 @@
 		<service android:name=".NotificationCleaningService" />
 		<service android:name=".LogOffService" />
 	</application>
-
-	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.VIBRATE" />
-
-	<uses-feature android:name="android.hardware.wifi" android:required="true" />
-	
-	<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8" />
 </manifest> 

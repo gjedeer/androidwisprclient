@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Fon</string>
+	<string name="user">E-mail (Username)</string>
+	<string name="password">Password</string>
+	<string name="active">Activo</string>
+	<string name="header_text">Introduza o seu nome de usuário e senha.\nVocê será conectado automaticamente toda vez que estiver próximo de um ponto WiFi da Fon.</string>
+
+	<string name="active_summary">Selecciona para activar o login automático</string>
+	<string name="user_summary">E-mail (Username)</string>
+	<string name="password_summary">Password</string>
+	<string name="notif_title_ok">Fon</string>
+	<string name="notif_text_ok">Ligado a %s</string>
+	<string name="notif_title_ko">Fon</string>
+	<string name="notif_text_ko">Erro de ligação  {%s}</string>
+	<string name="notif_default_ssid">Fon</string>
+	<string name="notif_error_100">Acesso recusado</string>
+  	<string name="notif_error_1024">WISPr indisponível </string>
+	<string name="notif_error_255">Erro </string>
+
+	<string name="connectionNotifications">Notificações</string>
+	<string name="connectionNotificationsEnable">Activar notificações</string>
+	<string name="connectionNotificationsSummary">Receber notificação quando te ligas à ZON@FON</string>
+	<string name="connectionNotificationsVibrate">Vibrar</string>
+	<string name="connectionNotificationsVibrateSummary">Faz com que o telemóvel vibre quando te ligas à ZON@FON</string>
+	<string name="connectionAutoEnable">Ligação Automática</string>
+	<string name="connectionAutoSummary">Ligar automaticamente quando está próximo de um Hotspot</string>
+	<string name="connectionRingtoneSummary">Faz com que o telemóvel toque quando te ligas à ZON@FON</string>
+
+	<string name="ringtone">Som</string>
+	<string name="general">Configuração de acesso</string>
+
+	<string name="help_text">Se é um cliente ZON você tem acesso gratuito!!\nPara mais infromações, Por favor ligue para 16990 ou visite http://www.zonfon.pt/</string>
+	<string name="help_title">Ajuda</string>
+
+	<string name="ok">OK</string> 
+
+	<string name="menu_close">Fechar</string>
+	<string name="menu_logOff">Desligar</string>
+	<string name="menu_advanced">Configurações avançadas</string>
+	<string name="menu_back">Voltar</string>
+	<string name="menu_help">Ajuda</string>
+	
+	<string name="banner">Banner</string>
+</resources>

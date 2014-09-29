@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<CheckBoxPreference
+		android:key="@string/pref_active" 
+		android:title="@string/active"
+		android:summary="@string/active_summary" 
+		android:defaultValue="true"
+		/>
+
+	<PreferenceCategory android:title="@string/general">
+		<CheckBoxPreference
+			android:key="@string/pref_connectionAutoEnable" 
+			android:title="@string/connectionAutoEnable"
+			android:summary="@string/connectionAutoSummary"
+			android:defaultValue="true"
+			/>
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/connectionNotifications">
+		<CheckBoxPreference 
+			android:key="@string/pref_connectionNotificationsEnable" 
+			android:title="@string/connectionNotificationsEnable" 
+			android:summary="@string/connectionNotificationsSummary"
+			android:defaultValue="true"
+			/>
+
+		<RingtonePreference 
+			android:layout="?android:attr/preferenceLayoutChild" 
+			android:dependency="@string/pref_connectionNotificationsEnable"
+			android:key="@string/pref_connectionRingtone" 
+			android:title="@string/ringtone" 
+			android:ringtoneType="notification" 
+			android:summary="@string/connectionRingtoneSummary"
+			android:defaultValue="content://settings/system/notification_sound"
+			/>
+
+		<CheckBoxPreference 
+			android:layout="?android:attr/preferenceLayoutChild" 
+			android:dependency="@string/pref_connectionNotificationsEnable"
+			android:key="@string/pref_connectionVibrate"  
+			android:title="@string/connectionNotificationsVibrate"
+			android:summary="@string/connectionNotificationsVibrateSummary"
+			android:defaultValue="false"
+			/>
+	</PreferenceCategory>
+</PreferenceScreen>  

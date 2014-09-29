@@ -5,7 +5,7 @@ An Android client for automatic authentication in FON network using WISPr
 
 Supports routers managed by FON and partners (BT, Neuf, Zon, Comstar, etc)
 
-This is a fork of https://code.google.com/p/androidwisprclient/
+This is a fork of https://github.com/jfisbein/androidwisprclient
 
 I intend to:
 
