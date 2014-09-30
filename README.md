@@ -24,3 +24,4 @@ https://github.com/gjedeer/androidwisprclient/releases
 ## Tips
 
 * If you're using a Netia-provided fon router (as opposed to a regular fonera purchased separately), you need to append the #netia suffix to your username (ex: peter@gmail.com -> peter@gmail.com#netia)
+* Don't add FON_* networks in Android Wi-Fi connection manager. This program will find such networks and connect to them automatically. Adding them may interfere with its operation.
