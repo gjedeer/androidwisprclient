@@ -18,6 +18,7 @@ package com.oakley.fon.util;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.UnknownHostException;
 import java.net.URL;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -130,6 +131,8 @@ public class FONUtils {
 				return blockedUrlText.equals(WebLogger.CONNECTED);
 			} catch (IOException e) {
 				Log.d(TAG, "Connectivity check had an IOException: " + e.getMessage() + " - test URL: " + WebLogger.BLOCKED_URL);
+			} catch (UnknownHostException e) {
+				Log.d(TAG, "Connectivity check had an UnknownHostException: " + e.getMessage() + " - test URL: " + WebLogger.BLOCKED_URL);
 			}
 		}
 
