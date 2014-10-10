@@ -134,9 +134,7 @@ public class FONUtils {
 				return blockedUrlText.equals(WebLogger.CONNECTED);
 			} catch (IOException e) {
 				Log.d(TAG, "Connectivity check had an IOException: " + e.getMessage() + " - test URL: " + WebLogger.BLOCKED_URL);
-			} catch (UnknownHostException e) {
-				Log.d(TAG, "Connectivity check had an UnknownHostException: " + e.getMessage() + " - test URL: " + WebLogger.BLOCKED_URL);
-			}
+			} 
 		}
 
 		return false;
