@@ -6,7 +6,7 @@
 	<string name="active">Active</string>
 	<string name="header_text">Enter your Fon username and password.\nYou will automatically be connected when you encounter a Fon Wi-Fi hotspot.</string>
 
-	<string name="active_summary">Check to active automatic Fon Login</string>
+	<string name="active_summary">Check to activate automatic Fon Login</string>
 	<string name="user_summary">Your Fon username</string>
 	<string name="password_summary">Your Fon password</string>
 	<string name="notif_title_ok">Fon</string>

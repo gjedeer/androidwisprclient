@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Fon</string>
+	<string name="user">Użytkownik</string>
+	<string name="password">Hasło</string>
+	<string name="active">Aktywuj</string>
+	<string name="header_text">Podaj swoją nazwę użytkownika w sieci fon oraz hasło.\nZostaniesz automatycznie połączony do hotspotów w których zasięgu się znajdujesz.\nJeśli jesteś klientem Netii, na końcu swojego emaila dodaj #netia</string>
+
+	<string name="active_summary">Kliknij aby automatycznie logować się do sieci Fon</string>
+	<string name="user_summary">Twoja nazwa użytkownika (najczęściej email)</string>
+	<string name="password_summary">Twoje hasło do sieci Fon</string>
+	<string name="notif_title_ok">Fon</string>
+	<string name="notif_text_ok">Połączono z %s</string>
+	<string name="notif_title_ko">Fon</string>
+	<string name="notif_text_ko">Błąd połączenia z siecią Fon {%s}</string>
+	<string name="notif_default_ssid">Fon</string>
+	<string name="notif_error_100">Nie dało się zalogować</string>
+	<string name="notif_error_1024">Nieobecny WISPr</string>
+	<string name="notif_error_255">Błąd wewnętrzny</string>
+
+	<string name="connectionNotifications">Powiadomienia</string>
+	<string name="connectionNotificationsEnable">Włącz powiadomienia</string>
+	<string name="connectionNotificationsSummary">Pokazuje powiadomienia przy połączeniu z siecią Fon</string>
+	<string name="connectionNotificationsVibrate">Wibracje</string>
+	<string name="connectionNotificationsVibrateSummary">Sygnalizuj wibracjami połączenie z siecią Fon</string>
+	<string name="connectionAutoEnable">Łącz automatycznie</string>
+	<string name="connectionAutoSummary">Automatycznie łączy się ze wszystkimi hotspotami Fon w zasięgu</string>
+	<string name="connectionRingtoneSummary">Dźwięk wydawany po połączeniu z siecią Fon</string>
+
+	<string name="ringtone">Dzwonek</string>
+	<string name="general">Ustawienia logowania</string>
+
+	<string name="help_text">Jeśli potrzebujesz pomocy, odwiedź https://corp.fon.com/support/</string>
+	<string name="help_title">Pomoc</string>
+
+	<string name="ok">OK</string>
+
+	<string name="menu_close">Zamknij</string>
+	<string name="menu_logOff">Wyloguj</string>
+	<string name="menu_advanced">Ustawienia Zaawansowane</string>
+	<string name="menu_back">Wróć</string>
+	<string name="menu_help">Pomoc</string>
+	
+	<string name="banner">Banner</string>
+
+
+	<string name="pref_active">pref.active</string>
+	<string name="pref_username">pref.username</string>
+	<string name="pref_password">pref.password</string>
+	<string name="pref_ssid">pref.ssid</string>
+	<string name="pref_bssid">pref.bssid</string>
+	<string name="pref_connectionNotificationsEnable">pref.connectionNotificationEnable</string>
+	<string name="pref_connectionRingtone">pref.connectionRingtone</string>
+	<string name="pref_connectionVibrate">pref.connectionVibrate</string>
+	<string name="pref_connectionAutoEnable">pref.connectionAutoEnable</string>
+	<string name="pref_logOffUrl">pref.logOffUrl</string>
+	<!--  <string name="pref_logOff">pref.logOff</string>  -->
+</resources>
