@@ -13,7 +13,7 @@ I intend to:
 
 ✓ Add support for Netia routers (FON_NETIA_FREE_INTERNET) [this is done, no special treatment was needed, it was a general bug that's fixed]
 
-3) Try to get this code on F-Droid
+✓ Try to get this code on F-Droid [done https://f-droid.org/repository/browse/?fdid=com.oakley.fon ]
 
 4) Accept pull requests from you (DIY style, your pull requests are welcome but your issues are not)
 
