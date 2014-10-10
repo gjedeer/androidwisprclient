@@ -119,6 +119,9 @@ public class FONUtils {
 			if (!result) {
 				result = ssid.equalsIgnoreCase("BTWiFi-with-FON");
 			}
+			if (!result) {
+				result = ssid.equalsIgnoreCase("BTWIFI");
+			}
 		}
 
 		return result;
