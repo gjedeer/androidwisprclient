@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Fon</string>
+	<string name="user">Gebruikersnaam</string>
+	<string name="password">Wachtwoord</string>
+	<string name="active">Inschakelen</string>
+	<string name="header_text">Voer je Fon gebruikersnaam en wachtwoord in.\nJe zult automatisch worden verbonden als je bij een Fon Wi-Fi hotspot in de buurt bent.</string>
+
+	<string name="active_summary">Vink aan om automatisch aanmelden in te schakelen.</string>
+	<string name="user_summary">Je Fon gebruikersnaam</string>
+	<string name="password_summary">Je Fon wachtwoord</string>
+	<string name="notif_title_ok">Fon</string>
+	<string name="notif_text_ok">Verbonden met %s</string>
+	<string name="notif_title_ko">Fon</string>
+	<string name="notif_text_ko">Fout tijdens het verbinden met Fon {%s}</string>
+	<string name="notif_default_ssid">Fon</string>
+	<string name="notif_error_100">Aanmelden mislukt</string>
+	<string name="notif_error_1024">WISPr niet aanwezig</string>
+	<string name="notif_error_255">Interne fout</string>
+
+	<string name="connectionNotifications">Meldingen</string>
+	<string name="connectionNotificationsEnable">Meldingen inschakelen</string>
+	<string name="connectionNotificationsSummary">Geen een melding als er met Fon verbonden is</string>
+	<string name="connectionNotificationsVibrate">Trillen</string>
+	<string name="connectionNotificationsVibrateSummary">Tril als er met Fon verbonden is</string>
+	<string name="connectionAutoEnable">Automatisch verbinden</string>
+	<string name="connectionAutoSummary">Maak automatisch verbinding met elke beschikbare Fon spot</string>
+	<string name="connectionRingtoneSummary">Geluid dat wordt afgespeeld als er met Fon verbonden is</string>
+
+	<string name="ringtone">Geluiden</string>
+	<string name="general">Aanmeldinstellingen</string>
+
+	<string name="help_text">Bezoek voor meer informatie http://corp.fon.com/nl/support</string>
+	<string name="help_title">Help</string>
+
+	<string name="ok">OK</string>
+
+	<string name="menu_close">Sluiten</string>
+	<string name="menu_logOff">Afmelden</string>
+	<string name="menu_advanced">Geavanceerde instellingen</string>
+	<string name="menu_back">Terug</string>
+	<string name="menu_help">Help</string>
+	
+	<string name="banner">Banner</string>
+
+
+	<string name="pref_active">pref.active</string>
+	<string name="pref_username">pref.username</string>
+	<string name="pref_password">pref.password</string>
+	<string name="pref_ssid">pref.ssid</string>
+	<string name="pref_bssid">pref.bssid</string>
+	<string name="pref_connectionNotificationsEnable">pref.connectionNotificationEnable</string>
+	<string name="pref_connectionRingtone">pref.connectionRingtone</string>
+	<string name="pref_connectionVibrate">pref.connectionVibrate</string>
+	<string name="pref_connectionAutoEnable">pref.connectionAutoEnable</string>
+	<string name="pref_logOffUrl">pref.logOffUrl</string>
+	<!--  <string name="pref_logOff">pref.logOff</string>  -->
+</resources>
