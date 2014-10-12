@@ -4,7 +4,7 @@
 	<string name="user">Username</string>
 	<string name="password">Password</string>
 	<string name="active">Active</string>
-	<string name="header_text">Enter your Fon username and password.\nYou will automatically be connected when you encounter a Fon Wi-Fi hotspot.</string>
+	<string name="header_text">Enter your Fon username and password.\nYou will be automatically connected when you encounter a Fon Wi-Fi hotspot.</string>
 
 	<string name="active_summary">Check to activate automatic Fon Login</string>
 	<string name="user_summary">Your Fon username</string>
@@ -14,20 +14,20 @@
 	<string name="notif_title_ko">Fon</string>
 	<string name="notif_text_ko">Error connecting to Fon {%s}</string>
 	<string name="notif_default_ssid">Fon</string>
-	<string name="notif_error_100">Login Failed</string>
+	<string name="notif_error_100">Login failed</string>
 	<string name="notif_error_1024">WISPr not present</string>
-	<string name="notif_error_255">Internal Error</string>
+	<string name="notif_error_255">Internal error</string>
 
 	<string name="connectionNotifications">Notifications</string>
-	<string name="connectionNotificationsEnable">Enable Notifications</string>
-	<string name="connectionNotificationsSummary">Receives notifications when you connect to Fon</string>
+	<string name="connectionNotificationsEnable">Enable notifications</string>
+	<string name="connectionNotificationsSummary">Display notifications when you connect to Fon</string>
 	<string name="connectionNotificationsVibrate">Vibrate</string>
 	<string name="connectionNotificationsVibrateSummary">Vibrate when you connect to Fon</string>
-	<string name="connectionAutoEnable">Auto Connect</string>
+	<string name="connectionAutoEnable">Auto connect</string>
 	<string name="connectionAutoSummary">Automatically connect to any available Fon Spot</string>
-	<string name="connectionRingtoneSummary">Sounds when you connect to Fon</string>
+	<string name="connectionRingtoneSummary">Sound to play when you connect to Fon</string>
 
-	<string name="ringtone">Ringtone</string>
+	<string name="ringtone">Notification sound</string>
 	<string name="general">Login Configuration</string>
 
 	<string name="help_text">If you need assistance, please visit http://corp.fon.com/support/</string>
