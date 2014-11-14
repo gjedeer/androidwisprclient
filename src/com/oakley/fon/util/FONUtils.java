@@ -18,6 +18,7 @@ package com.oakley.fon.util;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.UnknownHostException;
 import java.net.URL;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -118,6 +119,9 @@ public class FONUtils {
 			if (!result) {
 				result = ssid.equalsIgnoreCase("BTWiFi-with-FON");
 			}
+			if (!result) {
+				result = ssid.equalsIgnoreCase("BTWIFI");
+			}
 		}
 
 		return result;
@@ -130,7 +134,7 @@ public class FONUtils {
 				return blockedUrlText.equals(WebLogger.CONNECTED);
 			} catch (IOException e) {
 				Log.d(TAG, "Connectivity check had an IOException: " + e.getMessage() + " - test URL: " + WebLogger.BLOCKED_URL);
-			}
+			} 
 		}
 
 		return false;
