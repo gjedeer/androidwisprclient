@@ -1,0 +1,5 @@
+1.4.9:
++ Polish translation
++ Dutch translation
++ Support for new "BTWIFI" British Telecom hotspots (thanks Alan Hat for testing)
+* Fixed typos in English translation
