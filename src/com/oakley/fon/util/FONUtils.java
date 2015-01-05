@@ -65,7 +65,7 @@ public class FONUtils {
 
 		if (ssid != null) {
 			res = isFonera(ssid, bssid) || isBtFonera(ssid, bssid) || isSBPublicFonera(ssid, bssid)
-					|| isOIWifi(ssid, bssid);
+					|| isOIWifi(ssid, bssid) || isProximusFonera(ssid, bssid);
 		}
 
 		return res;
@@ -79,6 +79,11 @@ public class FONUtils {
 	public static boolean isFonera(String ssid, String bssid) {
 		ssid = FONUtils.cleanSSID(ssid);
 		return ssid != null && ssid.toUpperCase().startsWith("FON_") && !isLivedoor(ssid, bssid);
+	}
+
+	public static boolean isProximusFonera(String ssid, String bssid) {
+		ssid = FONUtils.cleanSSID(ssid);
+		return ssid != null && ssid.equalsIgnoreCase("PROXIMUS_FON");
 	}
 
 	public static boolean isOIWifi(String ssid, String bssid) {
