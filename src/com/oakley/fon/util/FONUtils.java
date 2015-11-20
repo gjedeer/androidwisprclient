@@ -1,16 +1,16 @@
 /*
  * This file is part of FONAccess.
- * 
+ *
  * FONAccess is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * FONAccess is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with FONAccess. If not, see <http://www.gnu.org/licenses/>.
  */
@@ -47,6 +47,7 @@ public class FONUtils {
 		validSuffix.add(".neuf.fr");
 		validSuffix.add(".sfr.fr");
 		validSuffix.add(".livedoor.com");
+		validSuffix.add(".vodafone-wifi.com");
 	}
 
 	public static boolean isSupportedNetwork(String ssid, String bssid) {
@@ -65,7 +66,8 @@ public class FONUtils {
 
 		if (ssid != null) {
 			res = isFonera(ssid, bssid) || isBtFonera(ssid, bssid) || isSBPublicFonera(ssid, bssid)
-					|| isOIWifi(ssid, bssid) || isProximusFonera(ssid, bssid);
+					|| isOIWifi(ssid, bssid) || isProximusFonera(ssid, bssid) || isVodafoneWifiItaly(ssid, bssid)
+					|| isVodafoneWifiSpain(ssid, bssid);
 		}
 
 		return res;
@@ -106,10 +108,23 @@ public class FONUtils {
 		return ssid != null && bssid != null && ssid.equalsIgnoreCase("FON_livedoor")
 				&& !bssid.startsWith(FON_MAC_PREFIX);
 	}
+
 	public static boolean isNetiaFonera(String ssid, String bssid) {
 		ssid = FONUtils.cleanSSID(ssid);
 		return ssid != null && bssid != null && ssid.equalsIgnoreCase("FON_NETIA_FREE_INTERNET");
 	}
+
+	public static boolean isVodafoneWifiItaly(String ssid, String bssid) {
+		ssid = FONUtils.cleanSSID(ssid);
+		return ssid != null && bssid != null && ssid.equalsIgnoreCase("Vodafone-WiFi");
+	}
+
+
+	public static boolean isVodafoneWifiSpain(String ssid, String bssid) {
+		ssid = FONUtils.cleanSSID(ssid);
+		return ssid != null && bssid != null && ssid.equalsIgnoreCase("_ONOWIFI");
+	}
+
 
 	public static boolean isBtHub(String ssid, String bssid) {
 		ssid = FONUtils.cleanSSID(ssid);
@@ -139,7 +154,7 @@ public class FONUtils {
 				return blockedUrlText.equals(WebLogger.CONNECTED);
 			} catch (IOException e) {
 				Log.d(TAG, "Connectivity check had an IOException: " + e.getMessage() + " - test URL: " + WebLogger.BLOCKED_URL);
-			} 
+			}
 		}
 
 		return false;
