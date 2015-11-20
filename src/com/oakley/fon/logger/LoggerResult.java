@@ -20,12 +20,14 @@ import com.oakley.fon.util.WISPrConstants;
 
 public class LoggerResult {
 	protected String result;
+	protected int attemptNumber;
 
 	protected String logOffUrl;
 
 	public LoggerResult(String result, String logOffUrl) {
 		this.result = result;
 		this.logOffUrl = logOffUrl;
+		this.attemptNumber = 0;
 	}
 
 	public String getResult() {
@@ -50,5 +52,17 @@ public class LoggerResult {
 	@Override
 	public String toString() {
 		return this.getClass().getSimpleName() + "{result: " + result + ", logOffUrl:" + logOffUrl + "}";
+	}
+
+	public int getAttemptNumber() {
+		return this.attemptNumber;
+	}
+
+	public String getFormattedAttemptNumber(int maxAttempts) {
+		return String.format("[%d/%d]", this.attemptNumber, maxAttempts);
+	}
+
+	public void setAttemptNumber(int attempt) {
+		this.attemptNumber = attempt;
 	}
 }

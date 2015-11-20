@@ -23,6 +23,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences.Editor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.util.Log;
 
@@ -38,6 +40,7 @@ import com.oakley.fon.util.WISPrConstants;
 
 public class WISPrLoggerService extends IntentService {
 	private static String TAG = WISPrLoggerService.class.getName();
+	private final int maxLoginAttempts = 3;
 
 	public WISPrLoggerService() {
 		super(TAG);
@@ -62,9 +65,24 @@ public class WISPrLoggerService extends IntentService {
 			logger = new WISPrLogger();
 		}
 
-		LoggerResult result = logger.login(username, password);
-		Log.d(TAG, "LoggerResult:" + result);
-		notifyConnectionResult(this, result, ssid);
+		ConnectivityManager connManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		LoggerResult result = new LoggerResult("Static languages are annoying sometimes", "http://gdr.geekhood.net/gdrwpl/");
+		for(int i = 0; i < this.maxLoginAttempts; i++) {
+			result = logger.login(username, password);
+			result.setAttemptNumber(i + 1);
+			Log.d(TAG, "LoggerResult:" + result);
+			notifyConnectionResult(this, result, ssid);
+
+			if (result.hasSucceded()) {
+				break;
+			}
+			/* Break the loop if disconnected to prevent unnecessary waiting */
+			NetworkInfo mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+			if (mWifi.isConnected()) {
+				break;
+			}
+		}
+
 		saveLogOffUrl(this, result);
 		if (result.hasSucceded()) {
 			FONUtils.cleanNetworks(this);
@@ -99,7 +117,7 @@ public class WISPrLoggerService extends IntentService {
 			if (result.hasSucceded()) {
 				notificationTitle = context.getString(R.string.notif_title_ok);
 				notificationText = context.getString(R.string.notif_text_ok, ssid);
-				appIntent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+				appIntent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("https://duckduckgo.com"));
 				vibratePattern = new long[] { 100, 250 };
 
 				pendingIntent = PendingIntent.getActivity(context, 1, appIntent, 0);
@@ -115,7 +133,7 @@ public class WISPrLoggerService extends IntentService {
 				}
 
 				notificationTitle = context.getString(R.string.notif_title_ko);
-				notificationText = context.getString(R.string.notif_text_ko, resultDesc);
+				notificationText = result.getFormattedAttemptNumber(this.maxLoginAttempts) + " " + context.getString(R.string.notif_text_ko, resultDesc);
 				appIntent = new Intent(context, AndroidWISPr.class);
 				vibratePattern = new long[] { 100, 250, 100, 500 };
 

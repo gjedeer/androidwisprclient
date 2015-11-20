@@ -70,7 +70,8 @@ public class WISPrLogger implements WebLogger {
 			}
 		} catch (Exception e) {
 			Log.e(TAG, "Error trying to log", e);
-			res = new LoggerResult(WISPrConstants.WISPR_RESPONSE_CODE_INTERNAL_ERROR, null);
+//			res = new LoggerResult(WISPrConstants.WISPR_RESPONSE_CODE_INTERNAL_ERROR, null);
+			res = new LoggerResult(e.getMessage(), null);
 		}
 		// Log.d(TAG, "WISPR Login Result: " + res);
 

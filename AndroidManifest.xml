@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.oakley.fon"
-	android:versionName="1.5.0" android:versionCode="150" android:installLocation="auto">
+	android:versionName="1.5.1" android:versionCode="151" android:installLocation="auto">
 
 	<meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIrz2YSu-eoPOUZdBts58P16DSrg8l19ZXzE1SOA" />
 
