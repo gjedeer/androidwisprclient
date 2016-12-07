@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.oakley.fon"
-	android:versionName="1.5.1" android:versionCode="151" android:installLocation="auto">
+	android:versionName="1.5.2" android:versionCode="152" android:installLocation="auto">
 
 	<meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIrz2YSu-eoPOUZdBts58P16DSrg8l19ZXzE1SOA" />
 
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -13,7 +14,7 @@
 	<uses-feature android:name="android.hardware.wifi" android:required="true" />
 	<uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
-	<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8" />
+	<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="19" />
 		
 	<application android:icon="@drawable/icon" android:label="@string/app_name">
 
