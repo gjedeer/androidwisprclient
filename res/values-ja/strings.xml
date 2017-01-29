@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Fon</string>
+	<string name="user">ユーザー名</string>
+	<string name="password">パスワード</string>
+	<string name="active">アクティブ</string>
+	<string name="header_text">Fon ユーザー名とパスワードを入力してください。\nFon Wi-Fi ホットスポットが見つかると自動的に接続されます。</string>
+
+	<string name="active_summary">チェックすると自動 Fon ログインを有効にします</string>
+	<string name="user_summary">Fon ユーザー名</string>
+	<string name="password_summary">Fon パスワード</string>
+	<string name="notif_title_ok">Fon</string>
+	<string name="notif_text_ok">%s に接続しました</string>
+	<string name="notif_title_ko">Fon</string>
+	<string name="notif_text_ko">Fon {%s} に接続時にエラー</string>
+	<string name="notif_default_ssid">Fon</string>
+	<string name="notif_error_100">ログインに失敗しました</string>
+	<string name="notif_error_1024">WISPr が存在しません</string>
+	<string name="notif_error_255">内部エラー</string>
+
+	<string name="connectionNotifications">通知</string>
+	<string name="connectionNotificationsEnable">通知を有効にする</string>
+	<string name="connectionNotificationsSummary">Fon に接続したときに通知を表示します</string>
+	<string name="connectionNotificationsVibrate">振動</string>
+	<string name="connectionNotificationsVibrateSummary">Fon に接続したときに振動します</string>
+	<string name="connectionAutoEnable">自動接続</string>
+	<string name="connectionAutoSummary">利用可能な Fon スポットに自動的に接続します</string>
+	<string name="connectionRingtoneSummary">Fon に接続したときにサウンドを再生します</string>
+
+	<string name="ringtone">通知サウンド</string>
+	<string name="general">ログイン設定</string>
+
+	<string name="help_text">支援が必要な場合は http://corp.fon.com/support/ をご覧ください</string>
+	<string name="help_title">ヘルプ</string>
+
+	<string name="ok">OK</string>
+
+	<string name="menu_close">閉じる</string>
+	<string name="menu_logOff">ログオフ</string>
+	<string name="menu_advanced">高度な設定</string>
+	<string name="menu_back">戻る</string>
+	<string name="menu_help">ヘルプ</string>
+	
+	<string name="banner">バナー</string>
+
+
+	<string name="pref_active">pref.active</string>
+	<string name="pref_username">pref.username</string>
+	<string name="pref_password">pref.password</string>
+	<string name="pref_ssid">pref.ssid</string>
+	<string name="pref_bssid">pref.bssid</string>
+	<string name="pref_connectionNotificationsEnable">pref.connectionNotificationEnable</string>
+	<string name="pref_connectionRingtone">pref.connectionRingtone</string>
+	<string name="pref_connectionVibrate">pref.connectionVibrate</string>
+	<string name="pref_connectionAutoEnable">pref.connectionAutoEnable</string>
+	<string name="pref_logOffUrl">pref.logOffUrl</string>
+	<!--  <string name="pref_logOff">pref.logOff</string>  -->
+</resources>
